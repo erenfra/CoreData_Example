@@ -11,6 +11,11 @@
 		240765A0297C640E0063954C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407659F297C640E0063954C /* ContentView.swift */; };
 		240765A2297C64120063954C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240765A1297C64120063954C /* Assets.xcassets */; };
 		240765A5297C64130063954C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240765A4297C64130063954C /* Preview Assets.xcassets */; };
+		240765AC297C642D0063954C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240765AB297C642D0063954C /* DataController.swift */; };
+		240765AF297C64AD0063954C /* AnimalsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 240765AD297C64AD0063954C /* AnimalsData.xcdatamodeld */; };
+		240765B2297C76320063954C /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240765B1297C76320063954C /* FilteredList.swift */; };
+		240765B4297C77390063954C /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240765B3297C77390063954C /* AnimalListView.swift */; };
+		240765B7297C78C70063954C /* AnimalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240765B6297C78C70063954C /* AnimalCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		2407659F297C640E0063954C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		240765A1297C64120063954C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		240765A4297C64130063954C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		240765AB297C642D0063954C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		240765AE297C64AD0063954C /* Animals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animals.xcdatamodel; sourceTree = "<group>"; };
+		240765B1297C76320063954C /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		240765B3297C77390063954C /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		240765B6297C78C70063954C /* AnimalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				2407659D297C640E0063954C /* CoreData_ExampleApp.swift */,
-				2407659F297C640E0063954C /* ContentView.swift */,
+				240765B5297C77450063954C /* Views */,
+				240765B0297C65210063954C /* Model */,
 				240765A1297C64120063954C /* Assets.xcassets */,
 				240765A3297C64130063954C /* Preview Content */,
 			);
@@ -65,6 +76,26 @@
 				240765A4297C64130063954C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		240765B0297C65210063954C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				240765AB297C642D0063954C /* DataController.swift */,
+				240765B1297C76320063954C /* FilteredList.swift */,
+				240765AD297C64AD0063954C /* AnimalsData.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		240765B5297C77450063954C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2407659F297C640E0063954C /* ContentView.swift */,
+				240765B3297C77390063954C /* AnimalListView.swift */,
+				240765B6297C78C70063954C /* AnimalCard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240765B7297C78C70063954C /* AnimalCard.swift in Sources */,
 				240765A0297C640E0063954C /* ContentView.swift in Sources */,
+				240765AF297C64AD0063954C /* AnimalsData.xcdatamodeld in Sources */,
+				240765B4297C77390063954C /* AnimalListView.swift in Sources */,
+				240765B2297C76320063954C /* FilteredList.swift in Sources */,
+				240765AC297C642D0063954C /* DataController.swift in Sources */,
 				2407659E297C640E0063954C /* CoreData_ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +375,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		240765AD297C64AD0063954C /* AnimalsData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				240765AE297C64AD0063954C /* Animals.xcdatamodel */,
+			);
+			currentVersion = 240765AE297C64AD0063954C /* Animals.xcdatamodel */;
+			path = AnimalsData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24076592297C640E0063954C /* Project object */;
 }
