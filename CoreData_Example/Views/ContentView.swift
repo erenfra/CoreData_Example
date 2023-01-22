@@ -21,17 +21,17 @@ struct ContentView: View {
                         NavigationLink(destination: {
                             AnimalListView(animal: "Dog", filter: "dog")
                         }, label: {
-                            AnimalCard(animal: "Dog", number: 2)
+                            AnimalCard(animal: "Dog", number: animals.filter { $0.animal == "dog"}.count)
                         })
                         NavigationLink(destination: {
                             AnimalListView(animal: "Cat", filter: "cat")
                         }, label: {
-                            AnimalCard(animal: "Cat", number: 4)
+                            AnimalCard(animal: "Cat", number: animals.filter { $0.animal == "cat"}.count)
                         })
                         NavigationLink(destination: {
                             AnimalListView(animal: "Bird", filter: "bird")
                         }, label: {
-                            AnimalCard(animal: "Bird", number: 1)
+                            AnimalCard(animal: "Bird", number: animals.filter { $0.animal == "bird"}.count)
                         })
                     }
                     Spacer()
@@ -61,6 +61,11 @@ struct ContentView: View {
                         gina.name = "Gina"
                         gina.animal = "cat"
                         gina.age = Int16(3)
+                        
+                        let mira = Animals(context: moc)
+                        mira.name = "Mira"
+                        mira.animal = "bird"
+                        mira.age = Int16(1)
                                                 
                         try? moc.save()
                         
